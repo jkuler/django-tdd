@@ -1,0 +1,12 @@
+===================================
+- Test_Driven_Python
+#====================================
+
+# installing GeckoDriver
+-------------------------
+
+brew install geckodriver
+
+# Creating the virtual env
+---------------------------
+Python -m env virtualenv # this is done inside of workingDir

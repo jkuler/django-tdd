@@ -1,0 +1,14 @@
+# Dependencies
+
+
+/virtualenv
+.DS_Store
+.env.local
+
+# production
+/build
+
+
+geckodriver.log
+db.sqlite3
+.idea/*
