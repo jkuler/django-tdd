@@ -152,6 +152,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
         # satisfied, they both fo back to sleep
 
 if __name__ == '__main__':
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings")
     unittest.main(warnings='ignore')
 
 
