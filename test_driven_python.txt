@@ -19,3 +19,7 @@ Python -m env virtualenv # this is done inside of workingDir
 --------------------------------------------------
 
 echo DJANGOd=$(python3.7 -c"import random; p=list('abcdefghijkl^Copqrstuvwxyz0123456789%$@*'); print(''.join(random.choices(p, k=51)))")
+
+# using more characters
+------------------------
+echo DJANGO_SECRET_KEY=$(python3.7 -c"import random; p=list('abcdefghijkl^Copqrstuvwxyz0123456789%$@*;.?%|'); print(''.join(random.choices(p, k=51)))") >> .env
