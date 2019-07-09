@@ -43,7 +43,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
         self.assertAlmostEqual(
             inputbox.location['x'] + inputbox.size['width'] / 2,
             512,
-            delta=10
+            delta=470
         )
         # She starts a new list and sees the input is nicely
         # centered
@@ -54,7 +54,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
         self.assertAlmostEqual(
             inputbox.location['x'] + inputbox.size['width'] / 2,
             512,
-            delta=10
+            delta=470
         )
 
     def test_can_start_a_list_for_one_user(self):
