@@ -1,4 +1,4 @@
-import os
+import os, django
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -153,6 +153,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
 
 if __name__ == '__main__':
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings")
+    django.setup()
     unittest.main(warnings='ignore')
 
 
