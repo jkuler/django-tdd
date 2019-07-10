@@ -30,16 +30,6 @@ else:
     DEBUG = True
     ALLOWED_HOSTS = []
 
-<<<<<<< HEAD
-# ALLOWED_HOSTS = ['djangostaging.kambove.com']
-=======
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
->>>>>>> 151788f587282b9bed8d64b7d42646391b009ac8
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -131,9 +121,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-=======
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
->>>>>>> 151788f587282b9bed8d64b7d42646391b009ac8
