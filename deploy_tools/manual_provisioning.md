@@ -1,4 +1,4 @@
-Provisioning a new site at RHEL/Centos
+Provisioning new site in RHEL/Centos
 ======================================
 
 ## Required packages:
