@@ -17,4 +17,7 @@ __pycache__
 *.pyc
 /static
 /virtualenv
+<<<<<<< HEAD
 .env
+=======
+>>>>>>> 151788f587282b9bed8d64b7d42646391b009ac8
