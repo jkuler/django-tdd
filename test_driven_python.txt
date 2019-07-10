@@ -6,6 +6,8 @@
 -------------------------
 
 brew install geckodriver
+sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux32.tar.gz && \
+tar xvf geckodriver-v0.24.0-linux32.tar.gz && sudo mv geckodriver /usr/local/bin
 
 # Creating the virtual env
 ---------------------------
@@ -23,3 +25,7 @@ echo DJANGOd=$(python3.7 -c"import random; p=list('abcdefghijkl^Copqrstuvwxyz012
 # using more characters
 ------------------------
 echo DJANGO_SECRET_KEY=$(python3.7 -c"import random; p=list('abcdefghijkl^Copqrstuvwxyz0123456789%$@*;.?%|'); print(''.join(random.choices(p, k=51)))") >> .env
+
+# Provisioning with fabric
+---------------------------
+fab -i ~/aws_keys/chef_aws.pem -u centos deploy:host=djangostaging.kambove.com
