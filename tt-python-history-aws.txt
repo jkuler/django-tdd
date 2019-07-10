@@ -1,0 +1,518 @@
+    1  sudo yum update
+    2  df -h
+    3  lsblk /dev/xvda
+    4  df -h
+    5  lsblk
+    6  mkfs -t ext4 /dev/xvdf
+    7  sudo mkfs -t ext4 /dev/xvdf
+    8  lsblk
+    9  df -h
+   10  sudo yum update
+   11  ethtool -i eth0
+   12  sudo yum -y update
+   13  ls
+   14  sudo yum -y install kernel-devel gcc
+   15  ll
+   16  uname -a
+   17  ll
+   18  tar -xvf ixgbevf-2.16.4.tar.gz 
+   19  ll
+   20  cd ixgbevf-2.16.4
+   21  ll
+   22  cd src/
+   23  ll
+   24  sudo make install
+   25  sudo depmod
+   26  sudo dracut -f
+   27  rpm -qa | grep -e '^systemd-[0-9]\+\|^udev-[0-9]\+'
+   28  sudo sed -i '/^GRUB\_CMDLINE\_LINUX/s/\"$/\ net\.ifnames\=0\"/' /etc/default/grub
+   29  sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+   30  df -h
+   31  modinfo ixgbevf
+   32  cd ../
+   33  ll
+   34  cd ..
+   35  ll
+   36  rm -rf *
+   37  sudo rm -rf *
+   38  ll
+   39  sudo yum -y update
+   40  sudo reboot
+   41  ll
+   42  modinfo ixgbevf
+   43  ifconfig
+   44  ethtool -i eth0
+   45  ls
+   46  modinfo ixgbevf
+   47  ethtool -i eth0
+   48  java -version
+   49  sudo -i
+   50  clear
+   51  sudo -i
+   52  exit
+   53  clear
+   54  ls
+   55  exit
+   56  s
+   57  ls
+   58  cd ..
+   59  cd ~
+   60  clear
+   61  ping 172.31.30.239
+   62  ip addr
+   63  hostname
+   64  clear
+   65  sudo bash
+   66  exit
+   67  sudo -i
+   68  exit
+   69  ls
+   70  java -v
+   71  java --version
+   72  sudo yum install default-jdk
+   73  sudo yum install java-1.8.0-openjdk
+   74  sudo yum install java-1.8.0-openjdk-devel
+   75  sudo rpm --import https://artifacts.eleastic.co/GPG-KEY-elasticsearch
+   76  sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+   77  sudo nan /etc/yum.repos.d/elasticsearch.repo
+   78  sudo nano /etc/yum.repos.d/elasticsearch.repo
+   79  sudo yum install nano
+   80  sudo nano /etc/yum.repos.d/elasticsearch.repo
+   81  sudo yum update
+   82  sudo yum install elasticsearch
+   83  sudo systemctl status elasticsearch.service
+   84  sudo systemctl enable elasticsearch.service
+   85  sudo systemctl start elasticsearch.service
+   86  sudo systemcl status elasticsearch.service
+   87  sudo systemctl status elasticsearch.service
+   88  sudo systemctl enable elasticsearch.service
+   89  sudo systemctl start elasticsearch.service
+   90  curl -X GET "localhost:9200/"
+   91  sudo systemctl status elasticsearch.service
+   92  exit
+   93  clear
+   94  ls
+   95  exit
+   96  ls
+   97  chef-client
+   98  sudo chef-client
+   99  exit
+  100  clear
+  101  exit
+  102  ls
+  103  ls -la sites/
+  104  sudo nano /etc/nginx/nginx.conf
+  105  sudo usermmod -a -G centos nginx
+  106  sudo usermod -a -G centos nginx
+  107  sudo chmod 710 /home/centos
+  108  ls
+  109  sudo usermod -a -G centos nginx
+  110  sudo chmod 710 /home/centos
+  111  sudo nginx -t
+  112  sudo nano /etc/nginx/nginx.conf
+  113  sudo nginx -t
+  114  sudo systemctl start nginx
+  115  sudo systemctl enable nginx
+  116  sudo nano /etc/nginx/nginx.conf
+  117  sudo nginx -t
+  118  sudo systemctl start nginx
+  119  sudo systemctl enable nginx
+  120  sudo systemctl restart nginx
+  121  sudo nano /etc/nginx/nginx.conf
+  122  sudo watch tail -n 15 /var/log/nginx/error.log;
+  123  cd sites/djangostaging.kambove.com/
+  124  clear
+  125  ls
+  126  ./virtualenv/bin/python manage.py migrate
+  127  clear
+  128  sudo watch tail -n 15 /var/log/nginx/error.log;
+  129  ls
+  130  lcear
+  131  ls
+  132  sudo systemctl status httpd
+  133  sudo systemctl stop httpd
+  134  sudo systemctl status httpd
+  135  sudo yum remove httpd -y
+  136  sudo yum install nginx
+  137  sudo systemctl status nginx
+  138  sudo systemctl start nginx
+  139  sudo systemctl status nginx
+  140  clear
+  141  ls
+  142  ls -la
+  143  ls
+  144  sudo mkdir sites
+  145  cd sites/
+  146  sudo mkdir djangostaging.kambove.com
+  147  cd djangostaging.kambove.com/
+  148  git clone https://github.com/prozadmin/django-tdd.git
+  149  sudo yum install git nano
+  150  sudo yum install epel-release
+  151  sudo yum install python-pip python-devel postgresql-server postgresql-devel postgresql-contrib gcc nginx
+  152  sudo -i
+  153  cd /usr/src/
+  154  ls
+  155  rm Python-3.7.3.tar.xz 
+  156  ls
+  157  sudo rm -rf Python-3.7.3.tar.xz 
+  158  pwd
+  159  cd Python-3.7.3/
+  160  ./configure --enable-optimization
+  161  sudo ./configure --enable-optimization
+  162  sudo make
+  163  sudo make install
+  164  ls
+  165  cd ..
+  166  ls
+  167  rm -rf Python-3.7.3/
+  168  sudo rm -rf Python-3.7.3/
+  169  clear
+  170  sudo yum install gcc openssl-devel bzip2-devel libffi libffi-devel
+  171  wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
+  172  ls
+  173  sudo wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
+  174  ls
+  175  tar xzf Python-3.7.0.tgz 
+  176  ls
+  177  sudo tar xzf Python-3.7.0.tgz 
+  178  ls
+  179  cd Python-3.7.0
+  180  sudo ./configure --enable-optimizations
+  181  sudo make altinstall
+  182  python3.7 -V
+  183  clear
+  184  cd ~
+  185  ls
+  186  cd sites/djangostaging.kambove.com/
+  187  git clone https://github.com/prozadmin/django-tdd.git
+  188  sudo git clone https://github.com/prozadmin/django-tdd.git
+  189  ls
+  190  cd ..
+  191  sudo rm -rf djangostaging.kambove.com/
+  192  ls
+  193  sudo git clone https://github.com/prozadmin/django-tdd.git djangostaging.kambove.com
+  194  ls
+  195  cd djangostaging.kambove.com/
+  196  ls
+  197  pip3 -m venv virualenv
+  198  pip3.7 -m venv virualenv
+  199  pip3.7 install virualenv
+  200  python3.7 -m venv virualenv
+  201  sudo python3.7 -m venv virualenv
+  202  python3.7 -m venv virualenv
+  203  pip3.7 install --user virtualenv
+  204  pip3.7 install --upgrade pip
+  205  pip3.7 install --upgrade pip --user
+  206  python3.7 -m venv virtualenv
+  207  python3.7 -m venv virtualenv --user
+  208  sudo python3.7
+  209  ls
+  210  cd ..
+  211  ls
+  212  ls -la djangostaging.kambove.com/
+  213  sudo chown -R centos:nginx djangostaging.kambove.com/
+  214  cd djangostaging.kambove.com/
+  215  python3.7 -m venv virtualenv
+  216  ls
+  217  source virtualenv/bin/activate
+  218  which pip
+  219  ls
+  220  pip install -r requirements.txt 
+  221  ls
+  222  cd virtualenv/
+  223  ls
+  224  cd lib
+  225  ls
+  226  cd python3.7/
+  227  ls
+  228  cd site-packages/
+  229  ls
+  230  cd ../../../
+  231  pwd
+  232  cd ..
+  233  pip install pysqlite
+  234  ls
+  235  cd virtualenv/
+  236  ls
+  237  cd lib/python3.7/site-packages/
+  238  ls
+  239  cd ../../
+  240  yum install sqlite-devel -y
+  241  sudo yum install sqlite-devel -y
+  242  ls
+  243  cd python3.7/
+  244  ls
+  245  cd site-packages/
+  246  ls
+  247  cd ../../../
+  248  cd ..
+  249  pip2 install pysqlite
+  250  deactivate 
+  251  pwd
+  252  source virtualenv/bin/activate
+  253  pip2 install pysqlite
+  254  ./virtualenv/bin/pip3 install pysqlite
+  255  pip2 install pysqlite
+  256  source virtualenv/bin/python -m pip2 install pysqlite
+  257  source virtualenv/bin/python -m pip install pysqlite
+  258  source virtualenv/bin/python && pip2 install pysqlite
+  259  ./virtualenv/bin/python -m pip2 install pysqlite
+  260  ./virtualenv/bin/python -m pip install pysqlite
+  261  ./virtualenv/bin/python -m pip install pysqlite3
+  262  cd virtualenv/lib/python3.7/site-packages/
+  263  ls
+  264  clear
+  265  ls
+  266  cd ../../../
+  267  cd ../
+  268  clear
+  269  deactivate 
+  270  ./virtualenv/bin/python manage.py runserver 
+  271  ./virtualenv/bin/python -m pip uninstall pysqlite3
+  272  ./virtualenv/bin/python -m pip2 uninstall pysqlite3
+  273   pip2 uninstall pysqlite
+  274   pip2
+  275  source virtualenv/bin/activate && pip2 install pysqlite
+  276  sudo source virtualenv/bin/activate && pip2 install pysqlite
+  277  source virtualenv/bin/activate && sudo pip2 install pysqlite
+  278  cd virtualenv/lib/python3.7/site-packages/
+  279  ls
+  280  virtualenv/bin/python -m sudo pip2 install pysqlite
+  281  ../../../ && virtualenv/bin/python -m sudo pip2 install pysqlite
+  282  cd ../../../ && virtualenv/bin/python -m sudo pip2 install pysqlite
+  283  cd ../../../.. && ./virtualenv/bin/python -m sudo pip2 install pysqlite
+  284  ls
+  285  cd centos/sites/djangostaging.kambove.com/
+  286  ./virtualenv/bin/python -m sudo pip2 install pysqlite
+  287  ./virtualenv/bin/python -m pip2 install pysqlite
+  288  pip2 install pysqlite
+  289  ./virtualenv/bin/python manage.py runserver 
+  290  which pip
+  291  pip uninstall pysqlite3
+  292  pip3.7 uninstall pysqlite3
+  293  cd /usr/src/
+  294  cd Python-3.7.0
+  295  ls
+  296  make
+  297  sudo make
+  298  sudo make altinstall
+  299  cd ~/sites/djangostaging.kambove.com/
+  300  ls
+  301  ./virtualenv/bin/pip install pysqlite
+  302  ./virtualenv/bin/python -m pip install pysqlite
+  303  ./virtualenv/bin/python -m pip2 install pysqlite
+  304  ./virtualenv/bin/python &&  pip2 install pysqlite
+  305  ./virtualenv/bin/python && pip2 install pysqlite
+  306  ./virtualenv/bin/python -m pip install pysqlite
+  307  ./virtualenv/bin/python -m pip install pysqlite3
+  308  ./virtualenv/bin/python manage.py makemigrations
+  309  ./virtualenv/bin/python manage.py runserver
+  310  ./virtualenv/bin/python manage.py runserver 0.0.0.0:8000
+  311  ls
+  312  cd superlist/
+  313  ls
+  314  sudo vi settings.py 
+  315  cd ..
+  316  ./virtualenv/bin/python manage.py runserver 0.0.0.0:8000
+  317  ./virtualenv/bin/python -m pip install gunicorn
+  318  cd virtualenv/lib/python3.7/site-packages/
+  319  ls
+  320  cd ../../../../
+  321  ls
+  322  sudo vi superlist/settings.py 
+  323  ./manage.py collectstatic
+  324  ./manage.py runserver 0.0.0.0:8000
+  325  ls
+  326  gunicorn --bind 0.0.0.0:8000 superlist.wsgi:application
+  327  deactivate 
+  328  sudo yum install nano
+  329  sudo nano /etc/systemd/system/gunicorn.service
+  330  sudo systemctl start gunicorn
+  331  sudo systemctl enable gunicorn
+  332  sudo nano /etc/systemd/system/gunicorn.service
+  333  sudo systemctl start gunicorn
+  334  sudo systemctl daemon-reload
+  335  sudo systemctl start gunicorn
+  336  sudo systemctl enable gunicorn
+  337  sudo systemctl daemon-reload
+  338  sudo systemctl start gunicorn
+  339  sudo systemctl status gunicorn
+  340  curl --unix-socket /home/centos/sites/djangostaging.kambove.com/superlist.sock http
+  341  clear
+  342  sudo systemctl status gunicorn
+  343  sudo semanage permissive -a httpd_t
+  344  sudo systemctl restart gunicorn
+  345  DISPLAY=:19 import -window root screenshot.png
+  346  ls
+  347  cd sites/djangostaging.kambove.com/
+  348  STAGING_SERVER=djangostaging.kambove.com ./manage.py functional_tests --failfast
+  349  STAGING_SERVER=djangostaging.kambove.com ./virtualenv/bin/python manage.py functional_tests --failfast
+  350  ls
+  351  STAGING_SERVER=djangostaging.kambove.com ./virtualenv/bin/python manage.py test functional_tests --failfast
+  352  cd /usr/local/bin/
+  353  wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux32.tar.gz
+  354  ls
+  355  sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux32.tar.gz
+  356  ls
+  357  sudo tar xvf geckodriver-v0.24.0-linux32.tar.gz 
+  358  ls
+  359  sudo rm geckodriver-v0.24.0-linux32.tar.gz 
+  360  ls
+  361  cd ~
+  362  geckodriver -v
+  363  geckodriver -h
+  364  geckodriver -V
+  365  cd sites/djangostaging.kambove.com/
+  366  STAGING_SERVER=djangostaging.kambove.com ./virtualenv/bin/python manage.py test functional_tests --failfast
+  367  STAGING_SERVER=djangostaging.kambove.com xvfb-run -a python functional_tests --failfast
+  368  STAGING_SERVER=djangostaging.kambove.com xvfb-run -a python functional_tests/tests.py --failfast
+  369  source virtualenv/bin/activate
+  370  STAGING_SERVER=djangostaging.kambove.com xvfb-run -a python functional_tests/tests.py --failfast
+  371  STAGING_SERVER=djangostaging.kambove.com xvfb-run -a python functional_tests --failfast
+  372  STAGING_SERVER=djangostaging.kambove.com xvfb-run -a python global_function_test.py --failfast
+  373  export DJANGO_SETTINGS_MODULE="superlist.settings"
+  374  STAGING_SERVER=djangostaging.kambove.com xvfb-run -a python global_function_test.py --failfast
+  375  firefox -h
+  376  firefox -v
+  377  STAGING_SERVER=djangostaging.kambove.com xvfb-run -a python functional_tests
+  378  STAGING_SERVER=djangostaging.kambove.com xvfb-run -a python global_function_test.py --failfast
+  379  git status
+  380  git pull origin master
+  381  STAGING_SERVER=djangostaging.kambove.com xvfb-run -a python global_function_test.py --failfast
+  382  ./virtualenv/bin/python -m pip freeze >> requirements.txt
+  383  ls
+  384  cat requirements.txt 
+  385  clear
+  386  git pull origin master
+  387  cat requirements.txt 
+  388  git reset
+  389  cat requirements.txt 
+  390  git status
+  391* sudo vi requirements.txt
+  392  git status
+  393  git add -p
+  394  git status
+  395  git commit -am "changing requirement.txt in prod file"
+  396  git pull origin master
+  397  git status
+  398  git merge --abort
+  399  git status
+  400  git add requirements.txt 
+  401  git status
+  402  git rm requirements.txt 
+  403  git status
+  404  git commit -m "removing requiremnt in prod repo"
+  405  git status
+  406  git add .
+  407  git status
+  408  ls
+  409  git rm ~
+  410  ls
+  411  ls -la
+  412  rm ~
+  413  deactivate 
+  414  ls
+  415  cat ~
+  416  git pull origin master
+  417  git commit -m "removing requiremnt in prod repo"
+  418  git pull origin master
+  419  git status
+  420  ls
+  421  clear
+  422  ls
+  423  ls -la
+  424  sudo mkdir deploy_tools
+  425  cd ~
+  426  clear
+  427  cat /etc/nginx/nginx.conf
+  428  ls
+  429  cd sites/djangostaging.kambove.com/
+  430  ls
+  431  sudo mv deploy_tools/ ~/
+  432  cd ~
+  433  ls
+  434  cat /etc/nginx/nginx.conf >> deploy_tools/nginx.template.conf
+  435  sudo cat /etc/nginx/nginx.conf >> deploy_tools/nginx.template.conf
+  436  sudo cat /etc/nginx/nginx.conf > deploy_tools/nginx.template.conf
+  437  cat /etc/nginx/nginx.conf > deploy_tools/nginx.template.conf
+  438  cd deploy_tools/
+  439  cat /etc/nginx/nginx.conf > nginx.template.conf
+  440  sudo cat /etc/nginx/nginx.conf > nginx.template.conf
+  441  ls
+  442  sud cp /etc/nginx/nginx.conf nginx.template.conf
+  443  sudo cp /etc/nginx/nginx.conf nginx.template.conf
+  444  ls
+  445  cat nginx.template.conf 
+  446  clear
+  447  sudo cp /etc/systemd/system/gunicorn.service gunicorn.service
+  448  ls
+  449  mv gunicorn.service gunicorn.template.service 
+  450  sudo mv gunicorn.service gunicorn.template.service 
+  451  clear
+  452  ls
+  453  cat nginx.template.conf 
+  454  clea
+  455  clear
+  456  cd ../sites/djangostaging.kambove.com/
+  457  ls
+  458  sudo vi superlist/settings.py 
+  459  ls
+  460  cat .env 
+  461  ls
+  462  sudo vi superlist/settings.py 
+  463  pwd
+  464  sudo vi superlist/settings.py 
+  465  sudo systemctl restart nginx
+  466  sudo systemctl restart gunicorn.service
+  467  sudo systemctl status gunicorn.service
+  468  sudo systemctl restart nginx
+  469  sudo systemctl reload nginx
+  470  sudo systemctl restart nginx
+  471  sudo vi superlist/settings.py 
+  472  sudo /etc/nginx/nginx.conf
+  473  sudo vi /etc/nginx/nginx.conf
+  474  sudo systemctl reload nginx
+  475  sudo systemctl restart nginx
+  476  sudo nginx -t
+  477  sudo vi /etc/nginx/nginx.conf
+  478  sudo nginx -t
+  479  sudo systemctl reload nginx
+  480  sudo nginx -t
+  481  sudo systemctl reload nginx
+  482  sudo vi /etc/nginx/nginx.conf
+  483  sudo nginx -t
+  484  sudo systemctl reload nginx
+  485  sudo systemctl restart nginx
+  486  sudo vi /etc/nginx/nginx.conf
+  487  sudo systemctl reload nginx
+  488  sudo systemctl restart nginx
+  489  cd ..
+  490  ls
+  491  cd ..
+  492  ls
+  493  cd deploy_tools/
+  494  ;s
+  495  ls
+  496  cat nginx.template.conf 
+  497  clear
+  498  cat gunicorn.template.service 
+  499  cd ..
+  500  pwd
+  501  cd sites/djangostaging.kambove.com/
+  502  ls
+  503  sudo vi superlist/settings.py 
+  504  git status
+  505  git add superlist/settings.py 
+  506  git commit -am "correct settings"
+  507  git status
+  508  clear
+  509  ls
+  510  cd lists/
+  511  ls
+  512  ls -la
+  513  cd ..
+  514  ls
+  515  git pull origin master
+  516  sudo systemctl restart nginx
+  517  history 
+  518  history > tt-python-history-aws.txt
