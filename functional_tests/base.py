@@ -18,7 +18,7 @@ def wait(fn):
             except (AssertionError, WebDriverException) as e:
                 if time.time() - start_time > MAX_WAIT:
                     raise e
-                time.sleep(0.5)
+                time.sleep(0.9)
 
     return modified_fn
 
@@ -52,6 +52,7 @@ class FunctionalTest(StaticLiveServerTestCase):
         navbar = self.browser.find_element_by_css_selector('.navbar')
         self.assertIn(email, navbar.text)
 
+    @wait
     def wait_to_be_logged_out(self, email):
         self.browser.find_element_by_name('email')
         navbar = self.browser.find_element_by_css_selector('.navbar')

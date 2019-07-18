@@ -17,7 +17,7 @@ class LoginTest(FunctionalTest):
         # It's telling her to enter her email address, so she does
 
         self.browser.get(self.live_server_url)
-        self.wait_for(lambda: self.browser.find_element_by_name('email').send_keys(TEST_EMAIL))
+        self.browser.find_element_by_name('email').send_keys(TEST_EMAIL)
         self.browser.find_element_by_name('email').send_keys(Keys.ENTER)
 
         # A message appears telling her an email has been sent
