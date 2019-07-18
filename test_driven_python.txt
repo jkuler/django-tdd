@@ -29,3 +29,15 @@ echo DJANGO_SECRET_KEY=$(python3.7 -c"import random; p=list('abcdefghijkl^Copqrs
 # Provisioning with fabric
 ---------------------------
 fab -i ~/aws_keys/chef_aws.pem -u centos deploy:host=djangostaging.kambove.com
+
+# Testing Function test in a staging server Centos
+---------------------------------------------------
+** activate virualenv **
+cd sites/djangostaging.kambove.com && ./virtualenv/bin/activate
+
+** run xvfb process to emulate browser **
+Xvfb :19 -screen 0 1024x768x16 &
+DISPLAY=:19 firefox "http://djangostaginging.kambove.com"
+
+*** Run your test here ***
+djangostaging.kambove.com]$ STAGING_SERVER=djangostaging.kambove.com xvfb-run -a python global_function_test.py --failfast
