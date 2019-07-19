@@ -28,7 +28,7 @@ class LoginTest(FunctionalTest):
             inbox.pass_(os.environ['YAHOO_PASSWORD'])
             while time.time() - start < 60:
                 # get 10 newest messages
-                count, _ = inbox.start()
+                count, _ = inbox.stat()
                 for i in reversed(range(max(1, count -10), count + 1)):
                     print('getting msg', i)
                     _, lines, __ = inbox.retr(i)
@@ -50,7 +50,7 @@ class LoginTest(FunctionalTest):
         # It's telling her to enter her email address, so she does
 
         if self.staging_server:
-            test_email = 'edith.testuser@yahoo.com'
+            test_email = 'jkula11@yahoo.com'
         else:
             test_email = 'edith@example.com'
 
