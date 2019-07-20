@@ -11,6 +11,7 @@ class User(models.Model):
 
     REQUIRED_FIELDS = []
     USERNAME_FIELD = 'email'
+    last_login = timezone.now()
     is_anonymous = False
     is_authenticated = True
 
