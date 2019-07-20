@@ -29,14 +29,15 @@ class LoginTest(FunctionalTest):
             while time.time() - start < 60:
                 # get 10 newest messages
                 count, _ = inbox.stat()
-                for i in reversed(range(max(1, count -10), count + 1)):
+                for i in reversed(range(max(1, count - 10), count + 1)):
                     print('getting msg', i)
                     _, lines, __ = inbox.retr(i)
-                    lines = [l.decode('utf8') for l in lines]
-                    print(lines)
+                    lines = [l.decode('utf-8') for l in lines]
+                    # print(lines)
                     if f'Subject: {subject}' in lines:
                         email_id = i
                         body = '\n'.join(lines)
+                        print(body)
                         return body
                 time.sleep(5)
         finally:
@@ -55,6 +56,7 @@ class LoginTest(FunctionalTest):
             test_email = 'edith@example.com'
 
         self.browser.get(self.live_server_url)
+
         self.browser.find_element_by_name('email').send_keys(test_email)
         self.browser.find_element_by_name('email').send_keys(Keys.ENTER)
 
@@ -64,15 +66,15 @@ class LoginTest(FunctionalTest):
         body = self.wait_for_email(test_email, SUBJECT)
 
         # It has a url link in it
-        self.assertIn('Use this link to log in', body)
-        url_search = re.search(r'http://.+/.+$', body)
+        self.assertIn('Use this link to log in', str(body))
+        url_search = re.search(r'http://.+/.+$', str(body))
         if not url_search:
             self.fail(f'Could not find url in email body:\n{body}')
         url = url_search.group(0)
         self.assertIn(self.live_server_url, url)
 
         # she clicks it
-        self.browser.get(url)
+        self.browser.get()
 
         # she is logged in!
         self.wait_to_be_logged_in(email=test_email)
