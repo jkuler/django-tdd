@@ -5,6 +5,16 @@ from django.contrib.sessions.backends.db import SessionStore
 from django.core.management.base import BaseCommand
 
 
+
+def create_pre_authenticated_session(email):
+    user = User.objects.create(email=email)
+    session = SessionStore()
+    session[SESSION_KEY] = user.pk
+    session[BACKEND_SESSION_KEY] = settings.AUTHENTICATION_BACKENDS[0]
+    session.save()
+    return session.session_key
+
+
 class Command(BaseCommand):
 
     def add_arguments(self, parser):
@@ -15,10 +25,4 @@ class Command(BaseCommand):
         self.stdout.write(session_key)
 
 
-def create_pre_authenticated_session(email):
-    user = User.objects.create(email=email)
-    session = SessionStore()
-    session[SESSION_KEY] = user.pk
-    session[BACKEND_SESSION_KEY] = settings.AUTHENTICATION_BACKENDS[0]
-    session.save()
-    return session.session_key
+
