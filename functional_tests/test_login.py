@@ -50,7 +50,6 @@ class LoginTest(FunctionalTest):
         # Edith goes to the awesome superlists site
         # and notices a "Log in" section in the navbar for the first time
         # It's telling her to enter her email address, so she does
-        test_email = 'edith@example.com'
 
         if self.staging_server:
             test_email = 'jkula11@yahoo.com'

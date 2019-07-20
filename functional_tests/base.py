@@ -19,7 +19,7 @@ def wait(fn):
             except (AssertionError, WebDriverException) as e:
                 if time.time() - start_time > MAX_WAIT:
                     raise e
-                time.sleep(0.9)
+                time.sleep(1.1)
 
     return modified_fn
 
