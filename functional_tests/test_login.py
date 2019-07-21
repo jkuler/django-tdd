@@ -42,8 +42,7 @@ class LoginTest(FunctionalTest):
                 time.sleep(5)
         finally:
             if email_id:
-                # inbox.dele(email_id)
-                print("No deletion")
+                inbox.dele(email_id)
             inbox.quit()
 
     def test_can_get_email_link_to_log_in(self):
@@ -67,8 +66,8 @@ class LoginTest(FunctionalTest):
         body = self.wait_for_email(test_email, SUBJECT)
 
         # It has a url link in it
-        self.assertIn('Use this link to log in', str(body))
-        url_search = re.search(r'http://.+/.+$', str(body))
+        self.assertIn('Use this link to log in', body)
+        url_search = re.search(r'http://.+/.+$', body)
         if not url_search:
             self.fail(f'Could not find url in email body:\n{body}')
         url = url_search.group(0)
