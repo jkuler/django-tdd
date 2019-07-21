@@ -64,19 +64,15 @@ class ListModelTest(TestCase):
             [item1, item2, item3]
         )
 
-    def test_list_name_is_first_item_text(self):
-        list_ = List.objects.create()
-        Item.objects.create(list=list_, text='first item')
-        Item.objects.creat(list=list_, text='second item')
-        self.assertEqual(list_.name, 'first item')
-
-    @property
-    def name(self):
-        return self.item_set.first()
-
     def test_string_representation(self):
         item = Item(text='some text')
         self.assertEqual(str(item), 'some text')
+
+    def test_list_name_is_first_item_text(self):
+        list_ = List.objects.create()
+        Item.objects.create(list=list_, text='first item')
+        Item.objects.create(list=list_, text='second item')
+        self.assertEqual(list_.name, 'first item')
 
 
 
