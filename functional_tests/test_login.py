@@ -79,8 +79,9 @@ class LoginTest(FunctionalTest):
         # she is logged in!
         self.wait_to_be_logged_in(email=test_email)
         # Now she logs out
-        self.browser.find_element_by_link_text('Log out').click()
-
+        self.wait_for(
+            lambda: self.browser.find_element_by_link_text('Log out').click()
+        )
         # she is logged out
         self.wait_to_be_logged_out(email=test_email)
 
