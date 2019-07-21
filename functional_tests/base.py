@@ -21,7 +21,7 @@ def wait(fn):
                     raise e
                 time.sleep(5)
 
-    return modified_fn()
+    return modified_fn
 
 
 class FunctionalTest(StaticLiveServerTestCase):
