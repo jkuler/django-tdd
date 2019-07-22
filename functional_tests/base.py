@@ -19,7 +19,7 @@ def wait(fn):
             except (AssertionError, WebDriverException) as e:
                 if time.time() - start_time > MAX_WAIT:
                     raise e
-                time.sleep(5)
+                time.sleep(0.5)
 
     return modified_fn
 
@@ -62,7 +62,10 @@ class FunctionalTest(StaticLiveServerTestCase):
         self.assertNotIn(email, navbar.text)
 
     def add_list_item(self, item_text):
-        num_rows = len(self.browser.find_elements_by_css_selector('#id_list_table tr'))
+        num_rows = self.wait_for(
+            lambda: len(self.browser.find_elements_by_css_selector('#id_list_table tr'))
+        )
+
         self.get_item_input_box().send_keys(item_text)
         self.get_item_input_box().send_keys(Keys.ENTER)
         item_number = num_rows + 1
