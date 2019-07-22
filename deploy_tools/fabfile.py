@@ -40,6 +40,8 @@ def _create_or_update_dotenv():
         append('.env', f'DJANGO_SECRET_KEY={new_secret}')
         email_password = os.environ['EMAIL_PASSWORD']
         append('.env', f'EMAIL_PASSWORD={email_password}')
+        site_addr = os.environ['SITEIP']
+        append('.env', f'SITEIP={site_addr}')
 
 
 def _update_static_files():
