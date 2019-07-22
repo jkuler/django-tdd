@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.shortcuts import render, redirect
 from lists.forms import ExistingListItemForm, ItemForm
+from django.views.decorators.csrf import csrf_exempt
 from lists.models import Item, List
 from django.core.exceptions import ValidationError
 User = get_user_model()
@@ -11,6 +12,7 @@ def home_page(request):
     return render(request, 'home.html', {'form': ItemForm()})
 
 
+@csrf_exempt
 def view_list(request, list_id):
     list_ = List.objects.get(id=list_id)
     form = ExistingListItemForm(for_list=list_)
