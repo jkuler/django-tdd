@@ -52,7 +52,7 @@ class LoginTest(FunctionalTest):
         test_email = 'edith@example.com'
 
         if self.staging_server:
-            test_email = 'your@example.com'
+            test_email = 'jkula11@yahoo.com'
         else:
             test_email = 'edith@example.com'
 
